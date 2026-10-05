@@ -5,7 +5,17 @@ export type EntryRow = {
   status: string
   pending: boolean
   abnormal: boolean
-  [field: string]: string | number | boolean
+  // 灾情速报的「核实结论集」是数组：同一速报可命中多个核实结论。
+  [field: string]: string | number | boolean | string[]
+}
+
+// 灾情速报的组合查询条件：发生时间段 + 灾害类型 + 受灾范围 + 核实结论。
+export type ReportQuery = {
+  startTime: string
+  endTime: string
+  disasterType: string
+  affectedArea: string
+  verdict: string
 }
 
 export type ModuleMeta = {
