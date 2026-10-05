@@ -5,7 +5,7 @@ export type EntryRow = {
   status: string
   pending: boolean
   abnormal: boolean
-  [field: string]: string | number | boolean
+  [field: string]: string | number | boolean | string[]
 }
 
 export type ModuleMeta = {
@@ -30,6 +30,12 @@ export type PageResult = {
 export type ActionResult = {
   ok: boolean
   message: string
+}
+
+/** 执行动作时页面带上的上下文：辖区用于灾情速报跨区域只读校验，结论用于确认核实时留痕。 */
+export type ActionContext = {
+  region?: string
+  conclusion?: string
 }
 
 export type OverviewResult = {

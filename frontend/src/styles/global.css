@@ -35,3 +35,14 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+.locate-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+.chip { border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 2px 12px; cursor: pointer; font-size: 12px; }
+.chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.tag { display: inline-block; background: #eef2f7; border-radius: 4px; padding: 0 6px; font-size: 12px; margin-left: 4px; }
+.tag.danger { background: #fef3f2; color: #b42318; margin-left: 0; }
+.status-pill { display: inline-block; background: #eef2f7; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+.status-pill[data-status="待核实"] { background: #fffaeb; color: #b54708; }
+.status-pill[data-status="已上报"] { background: #eff4ff; color: #1f6feb; }
+.status-pill[data-status="已归档"] { background: #f2f4f7; color: #475467; }
+.row-readonly td { background: #fafbfc; color: #94a3b8; }
+.muted-text { color: var(--muted); font-size: 12px; }
